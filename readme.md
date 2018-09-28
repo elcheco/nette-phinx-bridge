@@ -4,7 +4,10 @@ Phinx integration into Nette Framework
 [![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/elcheco/nette-phinx-bridge/blob/master/license.md)
 
 
-Extension integrating Phinx commands to contributte/console in Nette Framework using the framework's config file.
+Extension integrating Phinx commands to contributte/console in Nette Framework using the framework's config file. 
+
+Note: 
+Inspired by (https://github.com/banyacz/phinx-nette-bridge), but updated to latest libraries versions of Nette DI, Phinx and Contribute Console as the author does not communicate.
 
 
 Requirements
