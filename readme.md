@@ -19,8 +19,9 @@ Requirements
 Install
 ---
 1) ``composer require elcheco/nette-phinx-bridge``
-2) Register DI extension 
-``` 
+2) Register DI extension
+ 
+```neon
 extensions:
     phinx: ElCheco\Phinx\Extension
 ```
@@ -30,10 +31,11 @@ extensions:
 Configuration
 ---
 
-```
+```neon
 phinx:
-    paths:
+    paths: # directories must exist
         migrations: "./db/migrations"
+        seeds: "./db/seeds"
     default_migration_table: migrations
     environments:
         development:
@@ -58,4 +60,32 @@ Usage
 {CONSOLE} phinx:seed-create
 {CONSOLE} phinx:seed-run
 {CONSOLE} phinx:status  
+```
+
+Example
+---
+In my case I have console on path `bin\console`:
+```bash
+bin\console phinx:create AddNewTable
+```
+prints the output:
+```bash
+> using migration paths 
+>  - /Users/elcheco/www/project_dir/db/migrations
+> using migration base class Phinx\Migration\AbstractMigration
+> using default template
+> created db/migrations/20180928135219_add_new_table.php
+```
+or for the seeds:
+```bash
+bin\console phinx:seed-create FillNewTable
+```
+it prints:
+```bash
+> using migration paths 
+>  - /Users/elcheco/www/project_dir/db/migrations
+> using seed paths 
+>  - /Users/elcheco/www/project_dir/db/seeds
+> using seed base class Phinx\Seed\AbstractSeed
+> created ./db/seeds/FillNewTable.php
 ```
