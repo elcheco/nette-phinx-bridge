@@ -1,0 +1,23 @@
+{
+    "name": "elcheco/nette-phinx-bridge",
+    "description": "Extension integrating Phinx commands to contributte/console in Nette Framework using the framework's config file.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Miroslav Koula",
+            "email": "mkoula@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "nette/di": "^2.4",
+        "robmorgan/phinx": "^0.10",
+        "contributte/console": "^0.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ElCheco\\Phinx\\": "src/"
+        }
+    }
+}
