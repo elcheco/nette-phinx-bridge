@@ -43,11 +43,12 @@ class Extension extends CompilerExtension
             $command = $this->name . ':' . strtolower(preg_replace('#([a-z])([A-Z])#', '$1-$2', $name));
 
             $builder
-                ->addDefinition($this->prefix('console.commands.' . $name))
+                ->addDefinition($this->prefix($name))
                 ->setFactory($class)
                 ->addSetup('setName', [$command])
                 ->addSetup('setConfig', [$this->prefix('@config')])
-                ->addTag('console.command: phinx:' . $name);
+                ->addTag('console.command', $command )
+            ;
         }
     }
 }

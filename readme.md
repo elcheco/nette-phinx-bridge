@@ -1,7 +1,7 @@
 Phinx integration into Nette Framework
 --
 [![Downloads this Month](https://img.shields.io/packagist/dm/elcheco/nette-phinx-bridge.svg)](https://packagist.org/packages/elcheco/nette-phinx-bridge)
-[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/elcheco/nette-phinx-bridge/blob/master/license.md)
+[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/elcheco/nette-phinx-bridge/blob/master/license)
 
 
 Extension integrating Phinx commands to contributte/console in Nette Framework using the framework's config file. 
@@ -39,8 +39,8 @@ phinx:
     paths: # directories must exist
         migrations: "./db/migrations"
         seeds: "./db/seeds"
-    default_migration_table: migrations
     environments:
+        default_migration_table: migrations
         development:
             adapter: mysql
             host: 'localhost'
