@@ -12,7 +12,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=7.3",
+        "php": ">=7.2",
         "nette/di": "^3.0",
         "robmorgan/phinx": "^0.10",
         "contributte/console": "^0.7"
