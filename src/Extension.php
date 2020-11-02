@@ -4,13 +4,13 @@ namespace ElCheco\Phinx;
 
 use Nette\DI\CompilerExtension;
 use Phinx\Config\Config;
-use Phinx\Console\Command\Breakpoint;
-use Phinx\Console\Command\Create;
-use Phinx\Console\Command\Migrate;
-use Phinx\Console\Command\Rollback;
-use Phinx\Console\Command\SeedCreate;
-use Phinx\Console\Command\SeedRun;
-use Phinx\Console\Command\Status;
+use ElCheco\Phinx\Commands\Breakpoint;
+use ElCheco\Phinx\Commands\Create;
+use ElCheco\Phinx\Commands\Migrate;
+use ElCheco\Phinx\Commands\Rollback;
+use ElCheco\Phinx\Commands\SeedCreate;
+use ElCheco\Phinx\Commands\SeedRun;
+use ElCheco\Phinx\Commands\Status;
 
 /**
  * Class Extension
@@ -39,8 +39,8 @@ class Extension extends CompilerExtension
             ->setFactory(Config::class, [$this->getConfig()]);
 
         foreach (static::$commands as $class) {
-            $name = lcfirst(str_replace('Phinx\Console\Command\\', '', $class));
-            $command = $this->name . ':' . strtolower(preg_replace('#([a-z])([A-Z])#', '$1-$2', $name));
+            $name = lcfirst(str_replace('ElCheco\Phinx\Commands\\', '', $class));
+            $command = $this->name . ':' . strtolower(preg_replace('#([a-z])([A-Z])#', '$1:$2', $name));
 
             $builder
                 ->addDefinition($this->prefix($name))

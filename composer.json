@@ -14,8 +14,8 @@
     "require": {
         "php": ">=7.3",
         "nette/di": "^3.0",
-        "robmorgan/phinx": "^0.10",
-        "contributte/console": "^0.7"
+        "robmorgan/phinx": "^0.12",
+        "contributte/console": "^v0.8"
     },
     "autoload": {
         "psr-4": {
