@@ -60,8 +60,8 @@ Usage
 {CONSOLE} phinx:create
 {CONSOLE} phinx:migrate
 {CONSOLE} phinx:rollback
-{CONSOLE} phinx:seed-create
-{CONSOLE} phinx:seed-run
+{CONSOLE} phinx:seed:create
+{CONSOLE} phinx:seed:run
 {CONSOLE} phinx:status  
 ```
 
